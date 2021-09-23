@@ -2,8 +2,15 @@ body {
     color: #000;
     overflow-x: hidden;
     height: 100%;
+    background: #2575fc;
     background-color: #B0BEC5;
     background-repeat: no-repeat
+}
+
+.bgcolor {
+    padding-right: 0;
+    background: -webkit-linear-gradient(left, #070430, #2575fc);
+    overflow: hidden;
 }
 
 .card0 {
@@ -15,12 +22,12 @@ body {
     margin: 0px 40px
 }
 
-.logo {
+/* .logo {
     width: 200px;
     height: 100px;
     margin-top: 20px;
     margin-left: 35px
-}
+} */
 
 /* .image {
     width: 360px;
@@ -32,7 +39,7 @@ body {
 }
 
 .text-sm {
-    font-size: 14px !important
+    font-size: 14px
 }
 
 ::placeholder {
@@ -51,8 +58,7 @@ body {
     font-weight: 300
 }
 
-input,
-textarea {
+input, textarea {
     padding: 10px 12px 10px 12px;
     border: 1px solid lightgrey;
     border-radius: 2px;
@@ -65,19 +71,18 @@ textarea {
     letter-spacing: 1px
 }
 
-input:focus,
-textarea:focus {
-    -moz-box-shadow: none !important;
-    -webkit-box-shadow: none !important;
-    box-shadow: none !important;
+input:focus, textarea:focus {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
     border: 1px solid #304FFE;
     outline-width: 0
 }
 
 button:focus {
-    -moz-box-shadow: none !important;
-    -webkit-box-shadow: none !important;
-    box-shadow: none !important;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
     outline-width: 0
 }
 
