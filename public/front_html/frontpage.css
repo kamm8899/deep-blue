@@ -1,17 +1,22 @@
 body {
-    color: #000;
+    /* color: #000; */
     overflow-x: hidden;
     height: 100%;
-    background: #2575fc;
-    background-color: #B0BEC5;
-    background-repeat: no-repeat
+    /* background: #2575fc; */
+    /* background: -webkit-linear-gradient(top, #070430, #2575fc); */
+    /* background-repeat: no-repeat */
 }
 
 .bgcolor {
     padding-right: 0;
-    background: -webkit-linear-gradient(left, #070430, #2575fc);
+    background: -webkit-linear-gradient(bottom, #070430, #2575fc);
     overflow: hidden;
 }
+
+/* .loginbg {
+    background: -webkit-linear-gradient(bottom, #070430, #2575fc);
+    overflow: hidden;
+} */
 
 .card0 {
     box-shadow: 0px 4px 8px 0px #757575;
