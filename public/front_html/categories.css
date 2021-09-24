@@ -80,11 +80,23 @@ box-shadow:0 0 0 1px #a20068 inset, 0 0 0 2px rgba(255,255,255,0.15) inset, 0 8p
 }
 
 
-button:hover .textOut2 {
+.btn2:hover .textOut2 {
 	left: -100%;
 }
 
-button:hover .textIn2 
+.btn2:hover .textIn2 
 {
 	left: 0;
 }
+
+.card {
+	border:none;
+}
+
+
+
+/* .container::after {
+	content:"";
+	flex: auto;
+}
+ */
