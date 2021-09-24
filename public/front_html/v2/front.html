@@ -16,30 +16,30 @@
 </head>
 
 <body>
-    <div class="row">
-        <div class="col-md-6 mx-auto p-0">
-            <div class="card">
-                <div class="login-box">
-                    <div class="login-snip"> <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Login</label> <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
-                        <div class="login-space">
-                            <div class="login">
-                                <div class="group"> <label for="user" class="label">Username</label> <input id="user" type="text" class="input" placeholder="Enter your username"> </div>
-                                <div class="group"> <label for="pass" class="label">Password</label> <input id="pass" type="password" class="input" data-type="password" placeholder="Enter your password"> </div>
-                                <div class="group"> <input id="check" type="checkbox" class="check" checked> <label for="check"><span class="icon"></span> Keep me Signed in</label> </div>
-                                <div class="group"> <input type="submit" class="button" value="Sign In"> </div>
-                                <div class="hr"></div>
-                                <div class="foot"> <a href="#">Forgot Password?</a> </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    
+    <div class="wrapper fadeInDown">
+        <div class="logo">
+            <img class="logo" src="../logo/deepblue.png" alt="company logo">
         </div>
-    </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.1/js/bootstrap.bundle.min.js"
+        <div id="formContent">
+          <!-- Tabs Titles -->
+          <h2 class="active"> Sign In </h2>
+        <!--  -->
+
+          <!-- Login Form -->
+          <form>
+            <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
+            <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
+            <input type="submit" class="fadeIn fourth" value="Log In">
+          </form>
+      
+        </div>
+      </div>
+      
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.1/js/bootstrap.bundle.min.js"
         integrity="sha512-trzlduO3EdG7Q0xK4+A+rPbcolVt37ftugUSOvrHhLR5Yw5rsfWXcpB3CPuEBcRBCHpc+j18xtQ6YrtVPKCdsg=="
         crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
         integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
         crossorigin="anonymous"></script>
 

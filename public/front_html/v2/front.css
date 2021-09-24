@@ -1,277 +1,270 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
 
+/* BASIC */
+
+html {
+  background-color: #2575fc;
+}
+.logo{
+    height: 500px;
+    width: 700px;
+}
 body {
-    /* color: #000; */
-    overflow-x: hidden;
-    height: 100%;
-    /* background: #2575fc; */
-    /* background: -webkit-linear-gradient(top, #070430, #2575fc); */
-    /* background-repeat: no-repeat */
-}
-
-.bgcolor {
-    padding-right: 0;
-    background: -webkit-linear-gradient(bottom, #070430, #2575fc);
-    overflow: hidden;
-}
-
-/* .loginbg {
-    background: -webkit-linear-gradient(bottom, #070430, #2575fc);
-    overflow: hidden;
-} */
-
-.card0 {
-    box-shadow: 0px 4px 8px 0px #757575;
-    border-radius: 0px
-}
-
-.card2 {
-    margin: 0px 40px
-}
-
-/* .logo {
-    width: 200px;
-    height: 100px;
-    margin-top: 20px;
-    margin-left: 35px
-} */
-
-/* .image {
-    width: 360px;
-    height: 280px
-} */
-
-.border-line {
-    border-right: 1px solid #EEEEEE
-}
-
-.text-sm {
-    font-size: 14px
-}
-
-::placeholder {
-    color: #BDBDBD;
-    opacity: 1;
-    font-weight: 300
-}
-
-:-ms-input-placeholder {
-    color: #BDBDBD;
-    font-weight: 300
-}
-
-::-ms-input-placeholder {
-    color: #BDBDBD;
-    font-weight: 300
-}
-
-input, textarea {
-    padding: 10px 12px 10px 12px;
-    border: 1px solid lightgrey;
-    border-radius: 2px;
-    margin-bottom: 5px;
-    margin-top: 2px;
-    width: 100%;
-    box-sizing: border-box;
-    color: #2C3E50;
-    font-size: 14px;
-    letter-spacing: 1px
-}
-
-input:focus, textarea:focus {
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    border: 1px solid #304FFE;
-    outline-width: 0
-}
-
-button:focus {
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    outline-width: 0
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  background: -webkit-linear-gradient(bottom, #070430, #2575fc);
 }
 
 a {
-    color: inherit;
-    cursor: pointer
+  color: #92badd;
+  display:inline-block;
+  text-decoration: none;
+  font-weight: 400;
 }
 
-.btn-blue {
-    margin-top: 10px;
-    background-color: #1A237E;
-    width: 150px;
-    color: #fff;
-    border-radius: 2px
-}
-
-.btn-blue:hover {
-    background-color: #000;
-    cursor: pointer
-}
-
-.bg-blue {
-    color: #fff;
-    background-color: #1A237E
+h2 {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  display:inline-block;
+  margin: 40px 8px 10px 8px; 
+  color: #cccccc;
 }
 
 
-.login-box {
-    width: 100%;
-    margin: auto;
-    max-width: 525px;
-    min-height: 670px;
-    position: relative;
-    background: url(https://images.unsplash.com/photo-1507208773393-40d9fc670acf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1268&q=80) no-repeat center;
-    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .24), 0 17px 50px 0 rgba(0, 0, 0, .19)
+/* STRUCTURE */
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column; 
+  /* justify-content: center; */
+  width: 100%;
+  min-height: 100%;
+  padding: 20px;
 }
 
-.login-snip {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    padding: 90px 70px 50px 70px;
-    background: rgba(0, 77, 77, .9)
+#formContent {
+  -webkit-border-radius: 10px 10px 10px 10px;
+  border-radius: 10px 10px 10px 10px;
+  background: #fff;
+  padding: 30px;
+  width: 90%;
+  max-width: 450px;
+  position: relative;
+  padding: 0px;
+  -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+  box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+  text-align: center;
 }
 
-.login-snip .login,
-.login-snip .sign-up-form {
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    position: absolute;
-    transform: rotateY(180deg);
-    backface-visibility: hidden;
-    transition: all .4s linear
+#formFooter {
+  background-color: #f6f6f6;
+  border-top: 1px solid #dce8f1;
+  padding: 25px;
+  text-align: center;
+  -webkit-border-radius: 0 0 10px 10px;
+  border-radius: 0 0 10px 10px;
 }
 
-.login-snip .sign-in,
-.login-snip .sign-up,
-.login-space .group .check {
-    display: none
+
+
+/* TABS */
+
+h2.inactive {
+  color: #cccccc;
 }
 
-.login-snip .tab,
-.login-space .group .label,
-.login-space .group .button {
-    text-transform: uppercase
+h2.active {
+  color: #0d0d0d;
+  border-bottom: 2px solid #5fbae9;
 }
 
-.login-snip .tab {
-    font-size: 22px;
-    margin-right: 15px;
-    padding-bottom: 5px;
-    margin: 0 15px 10px 0;
-    display: inline-block;
-    border-bottom: 2px solid transparent
+
+
+/* FORM TYPOGRAPHY*/
+
+input[type=button], input[type=submit], input[type=reset]  {
+  background-color: #2575fc;
+  border: none;
+  color: white;
+  padding: 15px 80px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 13px;
+  -webkit-box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+  box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+  margin: 5px 20px 40px 20px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
-.login-snip .sign-in:checked+.tab,
-.login-snip .sign-up:checked+.tab {
-    color: #fff;
-    border-color: #1161ee
+input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover  {
+  background-color: #39ace7;
 }
 
-.login-space {
-    min-height: 345px;
-    position: relative;
-    perspective: 1000px;
-    transform-style: preserve-3d
+input[type=button]:active, input[type=submit]:active, input[type=reset]:active  {
+  -moz-transform: scale(0.95);
+  -webkit-transform: scale(0.95);
+  -o-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  transform: scale(0.95);
 }
 
-.login-space .group {
-    margin-bottom: 15px
+input[type=text] {
+  background-color: #f6f6f6;
+  border: none;
+  color: #0d0d0d;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 5px;
+  width: 85%;
+  border: 2px solid #f6f6f6;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
 }
 
-.login-space .group .label,
-.login-space .group .input,
-.login-space .group .button {
-    width: 100%;
-    color: #fff;
-    display: block
+input[type=text]:focus {
+  background-color: #fff;
+  border-bottom: 2px solid #5fbae9;
 }
 
-.login-space .group .input,
-.login-space .group .button {
-    border: none;
-    padding: 15px 20px;
-    border-radius: 25px;
-    background: rgba(255, 255, 255, .1)
+input[type=text]:placeholder {
+  color: #cccccc;
 }
 
-.login-space .group input[data-type="password"] {
-    text-security: circle;
-    -webkit-text-security: circle
+
+
+/* ANIMATIONS */
+
+/* Simple CSS3 Fade-in-down Animation */
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 
-.login-space .group .label {
-    color: #aaa;
-    font-size: 12px
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
 }
 
-.login-space .group .button {
-    background: #1161ee
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
 }
 
-.login-space .group label .icon {
-    width: 15px;
-    height: 15px;
-    border-radius: 2px;
-    position: relative;
-    display: inline-block;
-    background: rgba(255, 255, 255, .1)
+/* Simple CSS3 Fade-in Animation */
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fadeIn {
+  opacity:0;
+  -webkit-animation:fadeIn ease-in 1;
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode:forwards;
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+  -webkit-animation-duration:1s;
+  -moz-animation-duration:1s;
+  animation-duration:1s;
 }
 
-.login-space .group label .icon:before,
-.login-space .group label .icon:after {
-    content: '';
-    width: 10px;
-    height: 2px;
-    background: #fff;
-    position: absolute;
-    transition: all .2s ease-in-out 0s
+.fadeIn.first {
+  -webkit-animation-delay: 0.4s;
+  -moz-animation-delay: 0.4s;
+  animation-delay: 0.4s;
 }
 
-.login-space .group label .icon:before {
-    left: 3px;
-    width: 5px;
-    bottom: 6px;
-    transform: scale(0) rotate(0)
+.fadeIn.second {
+  -webkit-animation-delay: 0.6s;
+  -moz-animation-delay: 0.6s;
+  animation-delay: 0.6s;
 }
 
-.login-space .group label .icon:after {
-    top: 6px;
-    right: 0;
-    transform: scale(0) rotate(0)
+.fadeIn.third {
+  -webkit-animation-delay: 0.8s;
+  -moz-animation-delay: 0.8s;
+  animation-delay: 0.8s;
 }
 
-.login-space .group .check:checked+label {
-    color: #fff
+.fadeIn.fourth {
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  animation-delay: 1s;
 }
 
-.login-space .group .check:checked+label .icon {
-    background: #1161ee
+/* Simple CSS3 Fade-in Animation */
+.underlineHover:after {
+  display: block;
+  left: 0;
+  bottom: -10px;
+  width: 0;
+  height: 2px;
+  background-color: #56baed;
+  content: "";
+  transition: width 0.2s;
 }
 
-.login-space .group .check:checked+label .icon:before {
-    transform: scale(1) rotate(45deg)
+.underlineHover:hover {
+  color: #0d0d0d;
 }
 
-.login-space .group .check:checked+label .icon:after {
-    transform: scale(1) rotate(-45deg)
+.underlineHover:hover:after{
+  width: 100%;
 }
 
-.login-snip .sign-in:checked+.tab+.sign-up+.tab+.login-space .login {
-    transform: rotate(0)
+
+
+/* OTHERS */
+
+*:focus {
+    outline: none;
+} 
+
+#icon {
+  width:60%;
 }
 
-.login-snip .sign-up:checked+.tab+.login-space .sign-up-form {
-    transform: rotate(0)
-}
-
-*,
-:after,
-:before {
-    box-sizing: border-box
+* {
+  box-sizing: border-box;
 }
