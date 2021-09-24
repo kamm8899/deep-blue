@@ -1,6 +1,7 @@
 //IMPORT MODELS
 const Category = require('./Category');
 const Product = require('./Product');
+const User = require('./User');
 
 //associations.. do we need anything for users?
 Category.hasMany(Product, {
@@ -12,5 +13,5 @@ Product.belongsTo(Category, {
 });
 
 module.exports = {
-    Category, Product
+    Category, Product, User
 };
