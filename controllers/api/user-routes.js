@@ -24,7 +24,6 @@ const { User, Product, Category} = require('../../models');
       include: [
         {
           model: Product,
-          through: Cart,
           attributes: ['id','product_name','price','stock'],
         },
       ]

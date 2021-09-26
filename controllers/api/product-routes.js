@@ -21,7 +21,6 @@ router.get('/', (req, res) => {
         {
 
             model: User,
-            through: Cart,
             attributes: ['email']
           }
         ]
@@ -59,7 +58,6 @@ router.get('/:id', (req, res) =>{
         {
 
             model: User,
-            through: Cart,
             attributes: ['email']
           }
         ]
