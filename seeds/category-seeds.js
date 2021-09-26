@@ -20,12 +20,6 @@ const categoryData = [
 {
     category_name: 'Anchor Bottoms'
 },
-{
-    category_name: 'Pearl Divers'
-},
-{
-    category_name: 'falsdj;fasjdfl;kjasdl;fkj'
-},
 
 ]
 

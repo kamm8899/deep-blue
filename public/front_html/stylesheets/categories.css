@@ -8,9 +8,10 @@ body
 	align-items: center;
 	justify-content: center;
     background-image: radial-gradient(circle, #3e1eaf);
-  
+	min-height: 50rem;
+	padding-top: 4.5rem;
 }
-    
+
 button 
 {
  font-family: 'Righteous', cursive;
