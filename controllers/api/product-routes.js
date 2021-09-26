@@ -52,7 +52,7 @@ router.get('/:id', (req, res) => {
     include: [
       {
         model: Category,
-        attributes: ['category_id', 'category_name'],
+        attributes: ['id', 'category_name'],
       },
       // {
 
@@ -74,7 +74,7 @@ router.get('/:id', (req, res) => {
     });
 });
 //create new Product
-router.post('/', withAuth, (req, res) => {
+router.post('/', (req, res) => {
   if (req.session) {
     Product.create({
       product_name: req.body.product_name,
@@ -121,7 +121,7 @@ router.put('/:id', (req, res) => {
 });
 
 //route for delete product
-router.delete('/:id', withAuth, (req, res) => {
+router.delete('/:id', (req, res) => {
   console.log('id', req.params.id);
   Product.destroy({
     where: {
