@@ -16,13 +16,12 @@ router.get('/', (req, res) => {
     include: [
       {
         model: Category,
-        attributes: ['category_id', 'category_name'],
+        attributes: ['id', 'category_name'],
       },
-      {
-
-        model: User,
-        attributes: ['email']
-      }
+      // {
+      //   model: User,
+      //   attributes: ['email']
+      // }
     ]
   })
     .then(dbProductData => {
@@ -55,11 +54,11 @@ router.get('/:id', (req, res) => {
         model: Category,
         attributes: ['category_id', 'category_name'],
       },
-      {
+      // {
 
-        model: User,
-        attributes: ['email']
-      }
+      //   model: User,
+      //   attributes: ['email']
+      // }
     ]
   })
     .then(dbProductData => {
