@@ -1,19 +1,29 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins');
-
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script|Lobster+Two|Oleo+Script');
+@import url('https://fonts.googleapis.com/css?family=Righteous');
 /* BASIC */
 
 html {
-  background-color: #2575fc;
+  background: -webkit-linear-gradient(bottom, #070430, #2575fc);
 }
 .logo{
     height: 500px;
     width: 700px;
 }
 body {
-  font-family: "Poppins", sans-serif;
-  height: 100vh;
-  background: -webkit-linear-gradient(bottom, #070430, #2575fc);
+  
+  height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: -webkit-linear-gradient(bottom, #070430, #2575fc);
+	min-height: 50rem;
+	padding-top: 4.5rem;
 }
+.catlogo {
+  width: 150px;
+}
+
 
 a {
   color: #92badd;
@@ -81,6 +91,109 @@ h2.active {
   border-bottom: 2px solid #5fbae9;
 }
 
+.nav-link {
+  font-size: 25px;
+}
+
+.navbar {
+ background: -webkit-linear-gradient(top, #070430, #2575fc);
+ box-shadow: none;
+}
+
+.navbar.navbar-default {
+   background-color: #99ccff;
+   border: 0;
+   -webkit-box-shadow: none;
+   box-shadow: none;
+}
+
+.navbar.navbar-default .navbar-collapse {
+   border: 0;
+   -webkit-box-shadow: none;
+   box-shadow: none;
+}
+
+button 
+{
+font-family: 'Righteous', cursive;
+ width: 400px;
+ height: 2.5em;
+ border:2px solid white;
+ font-size: 27px;
+ line-height: 2.5em;
+ text-align: center;
+ position:relative;
+ overflow: hidden;
+ letter-spacing:5px;
+ 
+   
+}
+
+h1
+{
+      
+       font-family: 'Kaushan Script', cursive;
+}
+
+
+button span 
+{
+ position: absolute;
+ width: 100%;
+ top: 0;
+ left: 0;
+ transition: 0.4s ease-in;
+}
+
+.textOut2
+{
+ left: 0%;
+
+}
+   
+   
+.textIn2
+{
+color: yellow;
+}
+   
+
+
+.btn2
+{
+border-radius:10px 30px 10px;
+background-image: radial-gradient(circle, #11fbd2, #00cef1, #0099ef, #5a5bbc, #7e0664);
+box-shadow:0 0 0 1px #a20068 inset, 0 0 0 2px rgba(255,255,255,0.15) inset, 0 8px 2px 0 #a20068, 0 8px 8px 1px rgba(0,0,0,0.5);
+
+}
+
+.btn2:active
+{
+box-shadow:0 0 0 1px #9a00cd inset, 0 0 0 1px rgba(255,255,255,0.15) inset, 0 1px 3px 1px rgba(0,0,0,0.3);
+transform: translate(0px,10px);
+
+}
+
+.textIn2
+{
+ font-size: 1.1em;
+ background-image: linear-gradient(to bottom, #fd32c9, #eb008a, #cd0055, #a7042a, #7e1606);
+ left:100%;
+}
+
+
+.btn2:hover .textOut2 {
+ left: -100%;
+}
+
+.btn2:hover .textIn2 
+{
+ left: 0;
+}
+
+.card {
+ border:none;
+}
 
 
 /* FORM TYPOGRAPHY*/
