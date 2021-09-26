@@ -13,10 +13,10 @@ Product.belongsTo(Category, {
 });
 
 //added User associations, not directly associated with each other, cart product_id and user_id
-User.belongsToMany(Product,{
-   through: Cart, as:'cart', foreignKey: 'product_id', onDelete: 'cascade'});
-Product.belongsToMany(User,{
-    through: Cart, as:'cart', foreignKey: 'user_id', onDelete: 'cascade'});
+// User.belongsToMany(Product,{
+//    through: Cart, as:'cart', foreignKey: 'product_id', onDelete: 'cascade'});
+// Product.belongsToMany(User,{
+//     through: Cart, as:'cart', foreignKey: 'user_id', onDelete: 'cascade'});
 
 
 module.exports = {
