@@ -85,7 +85,7 @@ const { User, Product, Category} = require('../../models');
   });
 
   //Update User 
-  router.put('/:id', withAuth, (req, res) => {
+  router.put('/:id', (req, res) => {
   
     // pass in req.body instead to only update what's passed through
     User.update(req.body, {
@@ -108,7 +108,7 @@ const { User, Product, Category} = require('../../models');
   });
 
   //delete user
-  router.delete('/:id', withAuth, (req, res) => {
+  router.delete('/:id', (req, res) => {
     User.destroy({
       where: {
         id: req.params.id
