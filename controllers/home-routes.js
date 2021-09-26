@@ -55,20 +55,20 @@ router.get('/', (req, res) => {
         'price',
         'stock',
       ],
-      include: [
-        {
-          model: Category,
-          attributes: ['id', 'category_name'],
-          include: {
-            model: User,
-            attributes: ['email']
-          }
-        },
-        {
-          model: User,
-          attributes: ['email']
-        }
-      ]
+      // include: [
+      //   {
+      //     model: Category,
+      //     attributes: ['id', 'category_name'],
+      //     include: {
+      //       model: User,
+      //       attributes: ['email']
+      //     }
+      //   },
+      //   {
+      //     model: User,
+      //     attributes: ['email']
+      //   }
+      // ]
     })
       .then(dbProductData => {
         if (!dbProductData) {
