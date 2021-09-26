@@ -17,14 +17,11 @@ router.get('/', (req, res) => {
             {
             model: Category,
             attributes:['category_id', 'category_name'], 
-            include: {
-                model: User,
-                attributes: ['email']
-            
-            } 
         },
         {
+
             model: User,
+            through: Cart,
             attributes: ['email']
           }
         ]
@@ -58,14 +55,11 @@ router.get('/:id', (req, res) =>{
             {
             model: Category,
             attributes:['category_id', 'category_name'], 
-            include: {
-                model: User,
-                attributes: ['email']
-            
-            } 
         },
         {
+
             model: User,
+            through: Cart,
             attributes: ['email']
           }
         ]
@@ -154,4 +148,4 @@ router.put('/:id', (req, res) => {
 
     module.exports= router;
 
-    //what belongs to things do I need to add. 
+   
