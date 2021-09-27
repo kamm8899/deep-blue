@@ -4,7 +4,7 @@ const withAuth = require('../../utils/auth.js');
 
 const { Product, Category, User } = require('../../models');
 
-//get all Users
+//get all Products
 router.get('/', (req, res) => {
   Product.findAll({
     attributes: [
