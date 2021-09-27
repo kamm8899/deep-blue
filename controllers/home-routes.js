@@ -25,6 +25,37 @@ router.get('/category', (req, res) => {
     });
 });
 
+// This does not work?????
+router.get('/category/:id', (req, res) => {
+  Product.findAll({
+    where: {
+      category_id: req.params.id
+    },
+    attributes: [
+      'product_name',
+      'price',
+      'stock'
+    ],
+    include: [
+      {
+        model: Category,
+        attributes: ['id', 'category_name']
+      }
+    ]
+  })
+    .then(dbProductData => {
+      const products = dbProductData.map(product => product.get({ plain: true }));
+      console.log(products);
+      res.render('product', {
+        products
+      });
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
+
 // ----- CATEGORY ROUTES END ----- //
 
 
@@ -89,7 +120,7 @@ router.get('/product', (req, res) => {
       {
         model: Category,
         attributes: ['id', 'category_name'],
-        },
+      },
     ]
   })
     .then(dbProductData => {
