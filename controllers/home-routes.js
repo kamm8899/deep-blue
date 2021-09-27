@@ -25,7 +25,7 @@ router.get('/category', (req, res) => {
     });
 });
 
-// This does not work?????
+
 router.get('/category/:id', (req, res) => {
   Product.findAll({
     where: {
