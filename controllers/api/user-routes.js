@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { User, Product, Category} = require('../../models');
 
   //logout route
-
+//needs logout handlebar to work
   router.post('/logout', (req, res) => {
     if (req.session.loggedIn) {
       req.session.destroy(() => {
@@ -37,6 +37,7 @@ const { User, Product, Category} = require('../../models');
   });
 
   //delete user
+  //may need to delete since we only have one user
   router.delete('/:id', (req, res) => {
     User.destroy({
       where: {

@@ -1,0 +1,49 @@
+<div class="container mt-5">
+    <div class="row clearfix">
+        <div class="col-md-12 table-responsive">
+
+            <table class="table table-bordered table-hover table-sortable" id="tab_logic">
+
+                <thead>
+                    <tr>
+                        <th class="text-center">
+                            Product Name
+                        </th>
+                        <th class="text-center">
+                            Stock
+                        </th>
+                        <th class="text-center">
+                            Price
+                        </th>
+
+                        <th class="text-center" style="border-top: 1px solid #ffffff; border-right: 1px solid #ffffff;">
+                            Category
+                        </th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    {{#each products}}
+                    <tr>
+                        <td data-name="name">
+                            <p>{{product_name}}</p>
+                        </td>
+                        <td data-name="mail">
+                            <p>{{stock}}</p>
+                        </td>
+                        <td data-name="desc">
+                            <p>{{price}}</p>
+                        </td>
+
+                        <td data-name="cat">
+                            <p>{{category.category_name}}</p>
+                        </td>
+                    </tr>
+                    {{/each}}
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
