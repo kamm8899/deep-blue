@@ -138,7 +138,7 @@ router.get('/product', (req, res) => {
 
 //get a single product
 router.get('/product/:id', (req, res) => {
-  Post.findOne({
+  Product.findOne({
     where: {
       id: req.params.id
     },
@@ -169,10 +169,10 @@ router.get('/product/:id', (req, res) => {
         return;
       }
 
-      const post = dbProductData.get({ plain: true });
+      const product = dbProductData.get({ plain: true });
 
-      res.render('single-post', {
-        post,
+      res.render('product', {
+        product,
         loggedIn: req.session.loggedIn
       });
     })
@@ -186,14 +186,14 @@ router.get('/product/:id', (req, res) => {
 
 // ----- LOGIN ROUTES START ----- //
 
-//login route
-router.get('/login', (req, res) => {
+//login route/ homepage
+router.get('/homepage', (req, res) => {
   if (req.session.loggedIn) {
     res.redirect('/');
     return;
   }
 
-  res.render('login');
+  res.render('homepage');
 });
 
 //sign route
