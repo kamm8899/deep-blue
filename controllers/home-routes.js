@@ -165,7 +165,7 @@ router.get('/product/:id', (req, res) => {
   })
     .then(dbProductData => {
       if (!dbProductData) {
-        res.status(404).json({ message: 'No post found with this id' });
+        res.status(404).json({ message: 'No product found with this id' });
         return;
       }
 
@@ -183,21 +183,6 @@ router.get('/product/:id', (req, res) => {
 });
 // ----- PRODUCT ROUTES END ----- //
 
-
-// ----- LOGIN ROUTES START ----- //
-
-//login route/ homepage
-router.get('/login', (req, res) => {
-  if (req.session.loggedIn) {
-    res.redirect('/');
-    return;
-  }
-
-  res.render('homepage');
-});
-
-
-// ----- LOGIN ROUTES END ----- //
 
 
 module.exports = router;
