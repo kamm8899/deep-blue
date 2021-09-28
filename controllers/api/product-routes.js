@@ -5,6 +5,7 @@ const withAuth = require('../../utils/auth.js');
 const { Product, Category, User } = require('../../models');
 
 //get all Products
+//works
 router.get('/', (req, res) => {
   Product.findAll({
     attributes: [
@@ -38,6 +39,7 @@ router.get('/', (req, res) => {
 });
 
 //Find one Product
+//works
 router.get('/:id', (req, res) => {
   Product.findOne({
     where: {

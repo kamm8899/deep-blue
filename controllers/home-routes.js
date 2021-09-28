@@ -187,7 +187,7 @@ router.get('/product/:id', (req, res) => {
 // ----- LOGIN ROUTES START ----- //
 
 //login route/ homepage
-router.get('/homepage', (req, res) => {
+router.get('/login', (req, res) => {
   if (req.session.loggedIn) {
     res.redirect('/');
     return;

@@ -2,7 +2,6 @@ const router = require('express').Router();
 const { User, Product, Category} = require('../../models');
 
   //logout route
-//needs logout handlebar to work
   router.post('/logout', (req, res) => {
     if (req.session.loggedIn) {
       req.session.destroy(() => {
