@@ -196,15 +196,6 @@ router.get('/homepage', (req, res) => {
   res.render('homepage');
 });
 
-//sign route
-router.get('/signup', (req, res) => {
-  if (req.session.loggedIn) {
-    res.redirect('/');
-    return;
-  }
-
-  res.render('signup');
-});
 
 // ----- LOGIN ROUTES END ----- //
 
