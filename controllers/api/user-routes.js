@@ -8,12 +8,7 @@ const { User, Product, Category} = require('../../models');
       where: {
         id: req.params.id
       },
-      include: [
-        {
-          model: Product,
-          attributes: ['id','product_name','price','stock'],
-        },
-      ]
+  
     })
       .then(dbUserData => {
         if (!dbUserData) {
@@ -70,6 +65,25 @@ const { User, Product, Category} = require('../../models');
       res.status(404).end();
     }
   });
+
+  //register user
+  router.post('/', (req, res) => {
+    User.create({
+        email: req.body.email,
+        password: req.body.password
+    })
+        .then(dbUserData => {
+            req.session.save(() => {
+                req.session.user_id = dbUserData.id;
+                req.session.loggedIn = true;
+                res.json(dbUserData);   
+            });
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json(err);
+        });
+});
 
   //Update User 
   router.put('/:id', (req, res) => {
