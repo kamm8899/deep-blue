@@ -78,7 +78,35 @@ h2 {
   border-radius: 0 0 10px 10px;
 }
 
+th {
+  color:rgba(255,255,255,.55) ; 
+}
 
+p {
+  color:rgba(255,255,255,.55) ; 
+
+}
+.categoryForm {
+  padding-bottom: 25%;
+}
+
+#categoryName {
+  width: 100%;
+  margin: 0%;
+}
+
+#categoryLabel {
+  color:rgba(255,255,255,.55) ; 
+}
+
+#productName {
+  width: 100%;
+  margin: 0%;
+}
+
+#prodLabels {
+ color:rgba(255,255,255,.55) ; 
+}
 
 /* TABS */
 
@@ -134,7 +162,9 @@ h1
       
        font-family: 'Kaushan Script', cursive;
 }
-
+ h3 {
+   color: rgb(0, 0, 120);
+ }
 
 button span 
 {
