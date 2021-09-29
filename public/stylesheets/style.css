@@ -385,3 +385,29 @@ input[type=text]:placeholder {
 .table-sortable tbody tr {
   cursor: move;
 }
+
+/* Add row CSS */
+#add_row{
+  float: right;
+  max-width: 150px;
+}
+
+.add-product-div{
+  width: 100%;
+}
+.top-form-section{
+  display: flex;
+}
+.botton-form-section{
+  display: flex;
+}
+#add-prod-btn{
+  font-size: small;
+  float: right;
+  max-width: 200px;
+  margin-top: 10px;
+}
+
+#formDiv{
+  display: none;
+}
