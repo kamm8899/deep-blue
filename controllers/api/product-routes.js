@@ -79,7 +79,7 @@ router.post('/', (req, res) => {
     Product.create({
       product_name: req.body.product_name,
       price: req.body.price,
-      category_id: req.session.category_id,
+      category_id: req.body.category_id,
     })
       .then(dbProductData => {
         if (!dbProductData) {
