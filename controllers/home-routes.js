@@ -136,52 +136,22 @@ router.get('/product', (req, res) => {
     });
 });
 
-//get a single product
-router.get('/product/:id', (req, res) => {
-  Post.findOne({
-    where: {
-      id: req.params.id
-    },
-    attributes: [
-      'id',
-      'product_name',
-      'price',
-      'stock',
-    ],
-    // include: [
-    //   {
-    //     model: Category,
-    //     attributes: ['id', 'category_name'],
-    //     include: {
-    //       model: User,
-    //       attributes: ['email']
-    //     }
-    //   },
-    //   {
-    //     model: User,
-    //     attributes: ['email']
-    //   }
-    // ]
-  })
-    .then(dbProductData => {
-      if (!dbProductData) {
-        res.status(404).json({ message: 'No post found with this id' });
-        return;
-      }
 
-      const post = dbProductData.get({ plain: true });
 
-      res.render('single-post', {
-        post,
-        loggedIn: req.session.loggedIn
-      });
-    })
-    .catch(err => {
-      console.log(err);
-      res.status(500).json(err);
-    });
+// ----- NEW JAWNS START----- //
+router.get('/new/product', (req, res) => {
+  res.render('newProduct')
+
 });
-// ----- PRODUCT ROUTES END ----- //
+
+router.get('/new/category', (req, res) => {
+  res.render('newCategory')
+
+});
+
+
+// ----- NEW JAWNS END ----- //
+
 
 
 // ----- LOGIN ROUTES START ----- //
