@@ -1,4 +1,4 @@
-<form>
+<form onsubmit="addNewProduct()">
     <div class="form-group">
         <label for="productName">Product Name</label>
         <input type="text" class="form-control" id="productName" aria-describedby="productName" placeholder="Enter Product Name">
@@ -16,10 +16,8 @@
 
     <div class="form-group">
         <label for="categoryId">Price</label>
-        <select id="categoryId at-select" class="form-select" aria-label="Default select example">
-            <option selected>Choose a category</option>
-        </select>     
+        <input type="number" class="form-control" id="categoryId" aria-describedby="categoryId" placeholder="Enter Category Id">
     </div>
 
-    <button type="submit" id="add-prod-btn" class="btn btn-primary">Submit</button>
+    <button id="add-product-btn" type="submit" class="btn btn-primary">Submit</button>
 </form>
