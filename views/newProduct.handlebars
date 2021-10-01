@@ -1,7 +1,8 @@
 <form onsubmit="addNewProduct()">
     <div class="form-group">
         <label id="prodLabels" for="productName">Product Name</label>
-        <input type="text" class="form-control" id="productName" aria-describedby="productName" placeholder="Enter Product Name">
+        <input type="text" class="form-control" id="productName" aria-describedby="productName"
+            placeholder="Enter Product Name">
     </div>
 
     <div class="form-group">
@@ -13,11 +14,13 @@
         <label id="prodLabels" for="stock">Stock</label>
         <input type="number" class="form-control" id="stock" aria-describedby="stock" placeholder="Enter Stock Amount">
     </div>
-
     <div class="form-group">
-        <label id="prodLabels" for="categoryId">Price</label>
-        <input type="number" class="form-control" id="categoryId" aria-describedby="categoryId" placeholder="Enter Category Id">
+        <h7 id="prodLabels">Choose a Category</h7>
+        <select class="form-select mt-0" aria-label="Default select example" id="categoryId">
+            <option>Choose A Category</option>
+        </select> 
     </div>
+
 
     <button id="add-product-btn" type="submit" class="btn btn-primary mt-2">Submit</button>
 </form>
