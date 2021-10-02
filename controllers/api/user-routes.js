@@ -26,7 +26,7 @@ const withAuth = require('../../utils/auth.js');
 
   //Login route
 
-  router.post('/login', withAuth, (req, res) => {
+  router.post('/login', (req, res) => {
   
     User.findOne({
       where: {
@@ -68,7 +68,7 @@ const withAuth = require('../../utils/auth.js');
   });
 
   //register user
-  router.post('/', withAuth, (req, res) => {
+  router.post('/', (req, res) => {
     User.create({
         email: req.body.email,
         password: req.body.password
