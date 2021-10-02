@@ -1,10 +1,11 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
 const { Product, User, Category } = require('../models');
+const withAuth = require('../utils/auth.js');
 
 
 // ----- CATEGORY ROUTES START ----- //
-router.get('/category', (req, res) => {
+router.get('/category', withAuth, (req, res) => {
   console.log('======================');
   Category.findAll({
     attributes: [
@@ -28,7 +29,7 @@ router.get('/category', (req, res) => {
 });
 
 
-router.get('/category/:id', (req, res) => {
+router.get('/category/:id', withAuth, (req, res) => {
   Product.findAll({
     where: {
       category_id: req.params.id
@@ -100,7 +101,7 @@ router.get('/', (req, res) => {
 
 // ----- PRODUCT ROUTES START ----- //
 
-router.get('/product', (req, res) => {
+router.get('/product', withAuth, (req, res) => {
   console.log('======================');
   Product.findAll({
     attributes: [
@@ -134,7 +135,7 @@ router.get('/product', (req, res) => {
 
 
 // ----- NEW JAWNS START----- //
-router.get('/new/product', (req, res) => {
+router.get('/new/product', withAuth, (req, res) => {
   res.render('newProduct', {
     loggedIn: req.session.loggedIn,
     loggedOut: !req.session.loggedIn
@@ -142,7 +143,7 @@ router.get('/new/product', (req, res) => {
 
 });
 
-router.get('/new/category', (req, res) => {
+router.get('/new/category', withAuth, (req, res) => {
   res.render('newCategory', {
     loggedIn: req.session.loggedIn,
     loggedOut: !req.session.loggedIn
@@ -171,7 +172,7 @@ router.get('/login', (req, res) => {
 });
 
 //sign route
-router.get('/signup', (req, res) => {
+router.get('/signup', withAuth, (req, res) => {
   if (req.session.loggedIn) {
     res.redirect('/');
     return;
