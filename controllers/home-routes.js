@@ -80,12 +80,15 @@ router.get('/', (req, res) => {
   })
     .then(dbProductData => {
       const products = dbProductData.map(product => product.get({ plain: true }));
-
-      res.render('homepage', {
-        products,
-        loggedIn: req.session.loggedIn,
-        loggedOut: !req.session.loggedIn
-      });
+      if (!req.session.loggedIn) {
+        res.render('homepage', {
+          products,
+          loggedIn: req.session.loggedIn,
+          loggedOut: !req.session.loggedIn
+        });
+      } else {
+        res.redirect('/category');
+      };
     })
     .catch(err => {
       console.log(err);
@@ -174,7 +177,7 @@ router.get('/signup', (req, res) => {
     return;
   }
 
-  res.render('signup',  {
+  res.render('signup', {
     loggedIn: req.session.loggedIn,
     loggedOut: !req.session.loggedIn
   });
