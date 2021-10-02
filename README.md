@@ -18,16 +18,17 @@
   In order to use this project you will need to install npm, sequelize, mysql2, express sessions, handlebars. Once this has been installed via the terminal, you will need to build the database by running mysql -u root -p and running the database, and seed. Once this is done, the user will be able to use Deep-Blue Inventory Management System by loggin in as the super user:
 
   "email" : "jonhntitusisawesome@deepblue.com",
-	"password" : "giveus100points
+	"password" : "giveus100points"
   
    ## Usage
   This is a deep sea diver inventory management system, that can be utilized for any inventory management needs
   ## Collaborators
   This project had 5 Collaborators: 
-  Chase Brackeen
-  Zack Miller
-  Bilal Ersoy
-  Jessica Kamman
+  - Chase Brackeen
+  - Zack Miller
+  - Bilal Ersoy
+  - Jessica Kamman
+  - Ronnieve Romero
 
    ## Contribution
   Contribute to the project to reach out to the project Github owner
