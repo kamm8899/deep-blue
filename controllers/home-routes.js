@@ -17,6 +17,8 @@ router.get('/category', (req, res) => {
 
       res.render('category', {
         category,
+        loggedIn: req.session.loggedIn,
+        loggedOut: !req.session.loggedIn
       });
     })
     .catch(err => {
@@ -47,7 +49,9 @@ router.get('/category/:id', (req, res) => {
       const products = dbProductData.map(product => product.get({ plain: true }));
       console.log(products);
       res.render('product', {
-        products
+        products,
+        loggedIn: req.session.loggedIn,
+        loggedOut: !req.session.loggedIn
       });
     })
     .catch(err => {
@@ -73,28 +77,14 @@ router.get('/', (req, res) => {
       'price',
       'stock',
     ],
-    // include: [
-    //   {
-    //     model: Category,
-    //     attributes: ['id', 'category_name'],
-    //     include: {
-    //       model: User,
-    //       attributes: ['email']
-    //     }
-    //     },
-    //     {
-    //       model: User,
-    //       attributes: ['email']
-
-    //   },
-    // ]
   })
     .then(dbProductData => {
       const products = dbProductData.map(product => product.get({ plain: true }));
 
       res.render('homepage', {
         products,
-        loggedIn: req.session.loggedIn
+        loggedIn: req.session.loggedIn,
+        loggedOut: !req.session.loggedIn
       });
     })
     .catch(err => {
@@ -127,7 +117,9 @@ router.get('/product', (req, res) => {
       const products = dbProductData.map(product => product.get({ plain: true }));
       console.log(products);
       res.render('product', {
-        products
+        products,
+        loggedIn: req.session.loggedIn,
+        loggedOut: !req.session.loggedIn
       });
     })
     .catch(err => {
@@ -140,12 +132,18 @@ router.get('/product', (req, res) => {
 
 // ----- NEW JAWNS START----- //
 router.get('/new/product', (req, res) => {
-  res.render('newProduct')
+  res.render('newProduct', {
+    loggedIn: req.session.loggedIn,
+    loggedOut: !req.session.loggedIn
+  })
 
 });
 
 router.get('/new/category', (req, res) => {
-  res.render('newCategory')
+  res.render('newCategory', {
+    loggedIn: req.session.loggedIn,
+    loggedOut: !req.session.loggedIn
+  })
 
 });
 
@@ -163,7 +161,10 @@ router.get('/login', (req, res) => {
     return;
   }
 
-  res.render('login');
+  res.render('login', {
+    loggedIn: req.session.loggedIn,
+    loggedOut: !req.session.loggedIn
+  });
 });
 
 //sign route
@@ -173,7 +174,10 @@ router.get('/signup', (req, res) => {
     return;
   }
 
-  res.render('signup');
+  res.render('signup',  {
+    loggedIn: req.session.loggedIn,
+    loggedOut: !req.session.loggedIn
+  });
 });
 
 // ----- LOGIN ROUTES END ----- //
