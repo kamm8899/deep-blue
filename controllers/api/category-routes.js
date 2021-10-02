@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { Category, Product } = require('../../models');
+const withAuth = require('../../utils/auth');
 
 // The `/api/categy` endpoint
 router.get('/', (req, res) => {
@@ -56,7 +57,7 @@ router.get('/', (req, res) => {
 
   //Create new category 
 
-  router.post('/', (req, res) => {
+  router.post('/', withAuth, (req, res) => {
     // create a new category
     Category.create({
   

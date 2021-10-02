@@ -74,7 +74,7 @@ router.get('/:id', (req, res) => {
     });
 });
 //create new Product
-router.post('/', (req, res) => {
+router.post('/', withAuth, (req, res) => {
   if (req.session) {
     Product.create({
       product_name: req.body.product_name,
@@ -97,7 +97,7 @@ router.post('/', (req, res) => {
 });
 
 //update product name
-router.put('/:id', (req, res) => {
+router.put('/:id', withAuth, (req, res) => {
   Product.update(
     {
       product_name: req.body.product_name
@@ -122,7 +122,7 @@ router.put('/:id', (req, res) => {
 });
 
 //route for delete product
-router.delete('/:id', (req, res) => {
+router.delete('/:id', withAuth,(req, res) => {
   console.log('id', req.params.id);
   Product.destroy({
     where: {

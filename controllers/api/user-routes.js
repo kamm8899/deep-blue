@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { User, Product, Category} = require('../../models');
+const withAuth = require('../../utils/auth.js');
 
 //get user by id
   router.get('/:id', (req, res) => {
@@ -25,7 +26,7 @@ const { User, Product, Category} = require('../../models');
 
   //Login route
 
-  router.post('/login', (req, res) => {
+  router.post('/login', withAuth, (req, res) => {
   
     User.findOne({
       where: {
@@ -56,7 +57,7 @@ const { User, Product, Category} = require('../../models');
 
   //logout route
 
-  router.post('/logout', (req, res) => {
+  router.post('/logout', withAuth, (req, res) => {
     if (req.session.loggedIn) {
       req.session.destroy(() => {
         res.status(204).end();
@@ -67,7 +68,7 @@ const { User, Product, Category} = require('../../models');
   });
 
   //register user
-  router.post('/', (req, res) => {
+  router.post('/', withAuth, (req, res) => {
     User.create({
         email: req.body.email,
         password: req.body.password
@@ -86,7 +87,7 @@ const { User, Product, Category} = require('../../models');
 });
 
   //Update User 
-  router.put('/:id', (req, res) => {
+  router.put('/:id', withAuth, (req, res) => {
   
     // pass in req.body instead to only update what's passed through
     User.update(req.body, {
@@ -109,7 +110,7 @@ const { User, Product, Category} = require('../../models');
   });
 
   //delete user
-  router.delete('/:id', (req, res) => {
+  router.delete('/:id', withAuth, (req, res) => {
     User.destroy({
       where: {
         id: req.params.id
