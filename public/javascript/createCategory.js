@@ -1,6 +1,6 @@
 const category = $("#categoryName")
 
-const addnNewCategory = () => {
+const addNewCategory = () => {
     let newCategory = {
         category_name: category.val().trim()
     }
@@ -8,3 +8,5 @@ const addnNewCategory = () => {
     .then(console.log("Category posted!"))
     .catch(error => console.log(error));
 }
+
+
