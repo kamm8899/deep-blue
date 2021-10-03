@@ -1,7 +1,10 @@
-# deep-blue
+# Deep-Blue
   [![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
   ## Description
   Deep blue is a FullStack inventory management System, that was developed for a deep sea diver, named Uncle Chase. Uncle Chase needed a system to manage his inventory of deep sea treasures.This project includes a slick interface that was developed with HTML/CSS and the use of the Handlebars.js package. The Deep-Blue project also includes the MVC process which includes Models that includes a database to hold Uncle Chase's deep sea treasures. This project also includes API and home routes and with the Handlebars.js it is able to render properly. The project uses AJAX calls, with the use of axios in order for Uncle Chase to add new products and categories. A super user model was used here for authentication to ensure maximum security. 
+
+## [Click Here To Visit the Deployed App](https://deep-blue-project-2.herokuapp.com/)
+
   ## Table of Contents 
   [Installations](#Installations)
   
