@@ -96,7 +96,7 @@ router.post('/', withAuth, (req, res) => {
   }
 });
 
-//update product name
+//update contact details for pet 
 router.put('/:id', withAuth, (req, res) => {
   Product.update(
     {

@@ -5,6 +5,8 @@
 
 ## [Click Here To Visit the Deployed App](https://deep-blue-project-2.herokuapp.com/)
 
+![ScreenShot](./images/DeepBlue.png)
+
   ## Table of Contents 
   [Installations](#Installations)
   
