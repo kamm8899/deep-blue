@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { Category, Product } = require('../../models');
 const withAuth = require('../../utils/auth');
+//comment
 
 // The `/api/categy` endpoint
 router.get('/', (req, res) => {
