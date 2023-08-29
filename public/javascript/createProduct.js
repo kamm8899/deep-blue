@@ -1,4 +1,5 @@
 //get all the values from the form to saveld
+//d
 const productName = $('#productName');
 const price = $('#price');
 const stock = $('#stock');
