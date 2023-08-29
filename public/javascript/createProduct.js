@@ -1,4 +1,4 @@
-//get all the values from the form to save
+//get all the values from the form to saveld
 const productName = $('#productName');
 const price = $('#price');
 const stock = $('#stock');
