@@ -42,3 +42,4 @@ const addNewProduct = () => {
 };
 // getCategories();
 
+
