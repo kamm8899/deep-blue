@@ -7,6 +7,10 @@ const categoryId = $('#categoryId');
 
 $(document).ready(function() {
     //get categories for the selection form
+/**
+* @description This function retrieves the list of categories from the API using
+* axios and populates a select element with the category names and IDs.
+*/
     const getCategories = () => {
         axios.get("/api/category")
         .then(response => {
@@ -26,6 +30,11 @@ $(document).ready(function() {
 });  
 
 // funciton that will save new product to database
+/**
+* @description This function adds a new product to the server using an API call to
+* /api/product. It takes the values from various form fields (product name. price.
+* stock level. category ID) and creates an object with those values.
+*/
 const addNewProduct = () => {
     //object that holds all the values 
     let newProduct = {
